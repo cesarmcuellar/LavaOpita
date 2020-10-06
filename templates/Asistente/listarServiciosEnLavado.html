@@ -1,0 +1,68 @@
+{% extends "Asistente/index.html" %}
+{% block section %}
+<script>
+    listarserviciosEnLavado();
+</script>
+<br>
+<h4 align="center">LISTADO DE VEHICULOS QUE SE ENCUENTRAN EN LAVADO</h4>
+<BR>
+<table id="tblServicios" align="center" class="table table-bordered"  style="width: 90%">
+    <thead>
+        <tr class="bg-info text-white" style="text-align: center">
+            <th width="10%">Placa</th>
+            <th width="50%">Tipo Servicio</th>
+            <th width="30%">Fecha Hora Ingreso</th>
+            <th width="10%">Acción</th>                               
+        </tr>
+    </thead>
+    <tbody>                    
+        <tr id="fila" class="primeraFila">
+            <td id="sPlaca"></td>
+            <td id="sTiposervicio"></td>
+            <td id="sFechaInicio"></td>
+            <td id="sAccion">
+                <div class="form-group">
+                    <button id="btnAccion" value="" class="form_control btn btn-success">Actualizar</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<div id="mensaje" style="text-align:center"></div>
+<!--  Ventana modal cuando se va a eliminar -->   
+<!-- The Modal -->
+<div class="modal" id="modalActualizarServicio">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Encabezado -->
+            <div class="modal-header bg-info text-white">
+              <h4 class="modal-title">Reegistrar Terminación Lavado</h4>
+              <button type="button" class="text-white close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal Contenido -->
+            <div class="modal-body">
+                <table clas="table table-bordered w-50">
+                    <thead>
+                        <tr align="center">
+                            <th >OBSERVACIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea name="txtObservacion" id="txtObservacion" rows="8" cols="80" class="form-control"
+                                    placeholder="Ingrese aquí alguna observación del lavado si se requiee"></textarea>
+                            </td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </div>
+            <!-- Modal Pie Página -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal" id="btnActualizarModal">Enviar</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

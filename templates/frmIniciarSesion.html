@@ -1,0 +1,81 @@
+{% extends "index.html" %}
+{% block section %}
+<br>
+<form name="frmIniciarSesion" id="frmIniciarSesion" method="POST" action="/iniciarSesion">
+    <table  class="table table-bordered w-50" align="center">
+        <thead>
+            <tr  class="bg-info text-white" align="center">
+                <th colspan="2"> INICIO DE SESIÓN</th>   
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Login:</td>
+                <td><input type="text" name="txtLogin" id="txtLogin" 
+                           class="form-control" required /></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="txtPassword" id="txtPassword" 
+                           class="form-control" required/></td>
+            </tr>            
+            <tr align="center">
+                <td colspan="2"> 
+                    <input type="submit" value="Ingresar" name="btnIniciarSesion" id="btnIniciarSesion" 
+                           class="btn btn-success"  />
+                </td>
+            </tr>            
+            <tr >
+                <td colspan="2"> 
+                        <a href="#" id="recuperarClave">¿Ha olvidado su Contraseña?</a> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>    
+<div id="mensaje" style="text-align: center">
+{% if respuesta %}
+    {{respuesta.2}}
+{% endif %}
+</div>
+<!-- Modal para recuperar Contraseña -->
+<div class="modal w-100" id="modalRecuperarClave">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Encabezado -->
+            <div class="modal-header bg-info text-white">
+              <h4 class="modal-title">Recuperar Contraseña</h4>
+              <button type="button" class="text-white close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal Contenido -->
+            <div class="modal-body">
+                <table align="center" class="table table-bordered w-100">
+                    <thead>  </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ingrese Identificación:</td>
+                            <td>
+                                <input type="text" name="txtIdentificacion" id="txtIdentificacion"  value="" 
+                                       class="form-control" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ingrese su Correo Electrónico:</td>
+                            <td>
+                                <input type="email" name="txtCorreo" id="txtCorreo" value="" 
+                                       class="form-control" />
+                            </td>
+                        </tr>                      
+                    </tbody>
+                </table>
+            </div>
+            <!-- Modal Pie Página -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal" 
+                      id="btnRecuperarClaveModal">Enviar</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Home Principl</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{url_for('static', filename='js/funciones.js')}}"></script>
+</head>
+<body>
+    <div class="container">
+    <header align="center"><img class="logo" src="../static/imagenes/lavadero.png"></header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/Cliente">Home</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop" data-toggle="dropdown">
+                        Servicios
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Listar</a>  
+                    </div>
+                </li> 
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/salir">Salir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section style="width:90%; min-height:380px;">
+        {% block section %}
+        {% endblock %}
+    </section>    
+    <footer align="left" style="height:50px" class="bg-dark text-white"> 
+        Correo electróico: empresa@yahoo.com   - Nuestros Servicios  
+    </footer>
+    </div>   
+</body>
+</html>

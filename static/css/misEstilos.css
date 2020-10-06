@@ -1,0 +1,177 @@
+
+.negrilla{
+    font-weight: bold
+}
+
+.responsive{
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+     border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 0px solid #000000;
+}
+
+header{
+    height: 170px;
+}
+.logo{
+    width: 100%;
+    height: auto;    
+    background-image: url(static/imagenes/lavadero.png);
+    background-repeat:no-repeat;
+    background-size: 100%;       
+}
+/* estilo botón navbar-toggler
+*/
+.navbar-info .navbar-toggler {
+  background-color: #a6a6a6;
+  border-color: #a6a6a6;
+}
+
+.navbar-info .navbar-toggler  .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.fondo{
+    width: 100%;
+    min-height: 202px;
+    background-image: url(../Recursos/Imagenes/footer.png);
+    background-repeat:no-repeat;
+    background-size: 100%; 
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 0px solid #000000;
+}
+
+section{
+    min-height: 400px;
+}
+
+#foto{    
+    background-size: 100%;  
+    background-repeat: no-repeat;
+    background-position: 80%;
+    border-radius: 80%;
+    background-size: 100% auto;
+}
+
+p{
+    
+    font-size:medium;
+    font-family:tahoma
+}
+
+nav{
+     border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 0px solid #000000;
+}
+
+
+footer{
+    border-radius: 8px 8px 8px 8px;
+   -moz-border-radius: 8px 8px 8px 8px;
+   -webkit-border-radius: 8px 8px 8px 8px;
+   border: 0px solid #000000;
+}
+
+/* estilos botones*/
+
+:after, :before {
+    box-sizing: border-box;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+i {
+    margin-bottom: 4px;
+}
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align:left;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;  
+}
+.btn-app {
+    color: white;
+    box-shadow: none;
+    border-radius: 3px;
+    position: relative;
+    padding: 5px 5px;
+    margin: 0;
+    min-width: 60px;
+    max-width: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-size: 12px;
+    transition: all .2s;
+    background-color: steelblue !important;
+}
+    .btn-app > .fa, .btn-app > .glyphicon, .btn-app > .ion {
+        font-size: 30px;
+        display: block;
+    }
+    .btn-app:hover {
+        border-color: #aaa;
+        transform: scale(1.1);
+    }
+.pdf {
+    background-color: #dc2f2f !important;
+}
+
+.excel {
+    background-color: #3ca23c !important;
+}
+
+.csv {
+    background-color: #e86c3a !important;
+}
+
+.imprimir {
+    background-color: #8766b1 !important;
+}
+.selectTable {
+    height: 40px;
+    float: right;
+}
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+    margin-top: 15px;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #4682b4;
+    border-color: #4682b4;
+}
+    .btn-secondary:hover {
+        color: #fff;
+        background-color: #315f86;
+        border-color: #545b62;
+    }
+.titulo-tabla {
+    color: #606263;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.inline {
+    display: inline-block;
+    padding: 0;
+}
+
+
