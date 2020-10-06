@@ -1,0 +1,77 @@
+{% extends "Asistente/index.html" %}
+{% block section %}
+<p>
+<form name="frmServicio" id="frmServicio">
+    <table  class="table table-bordered w-50" align="center">
+        <thead>
+            <tr  class="bg-info text-white" align="center">
+                <th colspan="2"> REGISTRO DE SERVICIO DE LAVADO</th>   
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Placa de Carro o Moto:</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" name="txtPlaca" id="txtPlaca" 
+                           class="form-control" required />
+                    </div>
+                    <div id="msjPlaca"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Identificación del Cliente:</td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" name="txtIdentificacionCliente" id="txtIdentificacionCliente" 
+                           class="form-control" required/>
+                    </div>
+                    <div id="msjCliente"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Empleado Técnico de Lavado:</td>
+                <td>
+                    <div class="form-group">
+                        <select id="cbEmpleado" name="cbEmpleado" class="form-control">
+                            <option value="0">Seleccione</option>
+                            {% for empleado in empleados%}
+                                <option value="{{empleado[6]}}">{{empleado[2] + " " + empleado[3] }}</option>
+                            {% endfor%}
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Tipo de Servicio:</td>
+                <td>
+                    <div class="form-group">
+                        <select id="cbTipoServicio" name="cbTipoServicio" class="form-control">
+                            <option value="0">Seleccione</option>
+                            {% for tipo in tipos%}
+                                <option value="{{tipo[0]}}">{{tipo[1]}}</option>
+                            {% endfor%}
+                        </select>
+                    </div>                
+                </td>
+            </tr>              
+            <tr align="center">
+                <td colspan="2"> 
+                    <input type="button" value="Registrar" name="btnRegistrarServicio" id="btnRegistrarServicio" 
+                           class="btn btn-success"/>
+                </td>
+            </tr>            
+            
+        </tbody>
+    </table>
+    <input type="hidden" id="txtIdCliente" name="txtIdCliente" value="">
+    <input type="hidden" id="txtIdVehiculo" name="txtIdVehiculo" value="">
+    <input type="hidden" id="nombreCliente" name="nombreCliente" value="">
+    <input type="hidden" id="correo" name="correo" value="">
+
+</form>
+<br>
+ <div id="mensaje" aling="center"></div>
+
+
+{% endblock %}
