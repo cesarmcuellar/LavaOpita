@@ -232,7 +232,7 @@ def registrarServicioLavado():
             asunto="Registro Lavado"
             print(mensaje)
             try:
-                email = yagmail.SMTP("ccuellar@misena.edu.co",open("password").read())
+                email = yagmail.SMTP("sucorreo",open("password").read())
                 email.send(to=correo, subject=asunto,contents=mensaje)
             except:
                 print("Correo no enviado")  
