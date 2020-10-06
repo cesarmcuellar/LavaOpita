@@ -309,7 +309,31 @@ def ingresosPorMes():
         else:
             return jsonify({"estado":False, "datos":None, "mensaje":"Problemas al obtener los datos"}) 
 
-
+@app.route("/ingresosPorTipoServicio",methods=['POST', 'GET'])
+def ingresosPorTipoServicio():
+    """[summary]
+        Consulta los ingresos obtenidos en el lavadero por los servicios de 
+        lavado prestados por cada uno de los meses.
+    Returns:
+        [json]: [Datos con los ingresos por cada mes]
+    """
+    if request.method == 'POST':
+        dServicioLavado = DatosServicioLavado(mysql)       
+        resultado = dServicioLavado.ingresosPorTipoDeServicio()
+        #convierto el resultado que es una tupla a una lista
+        resultado = list(resultado)
+        # se crea una lista como requiere la api que lleguen los datos la lista su primer 
+        # elemento es una lista con los encabezados de los datos y los demas valores son 
+        # listas con el nombre del mes y el valor de los ingresos del mes ejemplo ["Octubre",50000.0]
+        datos = [["Tipo Servicio","Valor"]]
+        for d in range(len(resultado)):
+            resultado[d]=list(resultado[d])
+            resultado[d][0]=resultado[d][1]
+            datos.append(resultado[d])        
+        if(datos):
+            return jsonify({"estado":True, "datos":datos, "mensaje":"Ingresos por Tipo de Servicio"}) 
+        else:
+            return jsonify({"estado":False, "datos":None, "mensaje":"Problemas al obtener los datos"}) 
 
 # Iniciar la aplicación
 if __name__ == "__main__":

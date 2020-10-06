@@ -34,13 +34,13 @@ function dibujarGrafica() {
         title: 'Ingresos por Mes',
         hAxis: { title: 'Meses', titleTextStyle: { color: 'red' } },
         vAxis: { title: 'Ingresos', titleTextStyle: { color: 'blue' } },          
-        legend: { position: "none" }      
+        legend: { position: "true" }      
         };
   
     /* se crea un objeto de la clase google.visualization.ColumnChart  
      * ( Grafica de columna ) y se le pasa como parametro el div del 
      * HTML que contendrá a la gráfica.*/
-    var grafica = new google.visualization.ColumnChart(document.getElementById('grafica'));
+    var grafica = new google.visualization.PieChart(document.getElementById('grafica'));
     /* Se llama al método draw para dibujar la gráfica*/
     grafica.draw(data, options);
 }

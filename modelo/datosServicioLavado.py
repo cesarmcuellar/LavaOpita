@@ -64,4 +64,17 @@ class DatosServicioLavado():
         self.cursor.close()
         return resultado
 
+    def ingresosPorTipoDeServicio(self):
+        consulta="""
+                    select tipNombre, sum(tipCosto) from tiposservicio
+                    inner join servicioslavado on
+                    servicioslavado.serTipoServicio=tiposservicio.idTipoServicio
+                    where serEstado='Terminado'
+                    group by (tipNombre)
+                """
+        self.cursor.execute(consulta)
+        resultado = self.cursor.fetchall()       
+        self.cursor.close()
+        return resultado
+
 
