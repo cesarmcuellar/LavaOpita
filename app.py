@@ -10,10 +10,10 @@ import os
 app = Flask(__name__)
 
 # Datos para la conexión a mysql
-app.config['MYSQL_HOST'] = 'localhost' 
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'lavaopita'
+#app.config['MYSQL_HOST'] = 'localhost' 
+#app.config['MYSQL_USER'] = 'root'
+#app.config['MYSQL_PASSWORD'] = ''
+#app.config['MYSQL_DB'] = 'lavaopita'
 
 '''
 Crear un objeto de tipo MySQL y se pasa como parametro el objeto
